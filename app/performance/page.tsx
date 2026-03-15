@@ -81,7 +81,7 @@ export default function PerformancePage() {
   };
 
   return (
-    <div className="min-h-screen bg-black flex flex-col overflow-hidden relative">
+    <div className="min-h-screen bg-black flex flex-col overflow-hidden relative scrollbar-hide">
       {/* Navbar */}
       <motion.nav 
         className="relative z-50 px-6 py-4"
@@ -151,7 +151,7 @@ export default function PerformancePage() {
       </motion.nav>
 
       {/* Main Content */}
-      <div className="flex-1 flex items-center justify-center p-4 py-12 relative overflow-y-auto">
+      <div className="flex-1 flex items-center justify-center p-4 py-12 relative overflow-y-auto scrollbar-hide">
         {/* Animated gradient orbs */}
         <motion.div 
           className="absolute top-0 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-[150px]"
@@ -185,7 +185,7 @@ export default function PerformancePage() {
           >
             {/* Heading */}
             <motion.h1 
-              className="text-4xl md:text-5xl font-bold text-center mb-3 font-[family-name:var(--font-orbitron)] bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 font-[family-name:var(--font-orbitron)] bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 bg-clip-text text-transparent break-words"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
