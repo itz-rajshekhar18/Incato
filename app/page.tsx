@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState({
@@ -248,6 +249,26 @@ export default function Home() {
             animate={{ width: 64 }}
             transition={{ duration: 1, delay: 1.5 }}
           />
+        </motion.div>
+
+        {/* Developer Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.5 }}
+        >
+          <Link href="/homepage">
+            <motion.button
+              className="px-8 py-4 bg-purple-600/20 hover:bg-purple-600/40 border border-purple-500/50 rounded-xl text-purple-200 font-medium backdrop-blur-sm transition-all duration-300"
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 0 30px rgba(168, 85, 247, 0.5)"
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              View Homepage (Dev)
+            </motion.button>
+          </Link>
         </motion.div>
       </main>
     </div>
